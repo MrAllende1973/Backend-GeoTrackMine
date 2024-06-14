@@ -1,4 +1,3 @@
-// Importaciones necesarias
 import { Router } from 'express';
 import { readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
@@ -9,7 +8,6 @@ import { AppError } from '../utils/error.handle.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Definición de constantes
 const PATH_ROUTER = `${__dirname}`;
 const router = Router();
 

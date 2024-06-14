@@ -1,26 +1,20 @@
-import { pool } from '../config/db.js';
+import Log from '../models/Log.js';
 
 // Función para registrar errores en la base de datos
 const logErrorToDatabase = async (err, req) => {
-    const connection = await pool.getConnection();
     try {
-        const sql = `
-            INSERT INTO Logs (Level, Message, Component, Details)
-            VALUES (?, ?, ?, ?)
-        `;
-        const params = [
-            err.status || 'error',
-            err.message,
-            req.path,
-            JSON.stringify({
+        await Log.create({
+            level: err.status || 'error',
+            message: err.message,
+            component: req.path,
+            details: {
                 method: req.method,
                 stack: err.stack,
-                statusCode: err.statusCode || 500
-            })
-        ];
-        await connection.query(sql, params);
-    } finally {
-        connection.release();
+                statusCode: err.statusCode || 500,
+            },
+        });
+    } catch (error) {
+        console.error('Error logging to database:', error);
     }
 };
 
