@@ -9,6 +9,10 @@ Log.init({
         autoIncrement: true,
         primaryKey: true,
     },
+    timestamp: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+    },
     level: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -24,10 +28,6 @@ Log.init({
     details: {
         type: DataTypes.JSON,
         allowNull: false,
-    },
-    timestamp: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
     },
 }, {
     sequelize,

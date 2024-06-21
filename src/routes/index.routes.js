@@ -3,6 +3,7 @@ import { readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { AppError } from '../utils/error.handle.js';
+import chalk from 'chalk';
 
 // Recreando la funcionalidad de __dirname para módulos ES
 const __filename = fileURLToPath(import.meta.url);
@@ -27,8 +28,9 @@ const loadRoutesFromFile = async (file) => {
     if (cleanName !== 'index') {
         try {
             const module = await import(`./${cleanName}.routes.js`);
-            console.log(`Se estan cargando las rutas... /${cleanName}`);
+            console.time(chalk.cyan(`Cargando rutas: /${cleanName}`));
             router.use(`/${cleanName}`, module.default);
+            console.timeEnd(chalk.cyan(`Cargando rutas: /${cleanName}`));
         } catch (error) {
             throw new AppError(`Error al cargar rutas de ${cleanName}: ${error.message}`, 500);
         }

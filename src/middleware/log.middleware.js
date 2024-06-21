@@ -1,5 +1,6 @@
 import morgan from 'morgan';
-import { pool } from '../config/db.js';
+import HTTPLog from '../models/HTTPLog.js';
+import chalk from 'chalk';
 
 // Configuración de tokens personalizados
 morgan.token('ip', (req) => req.ip);
@@ -23,15 +24,22 @@ export const logMiddleware = morgan(morganFormat, {
             let logLevel = determineLogLevel(parseInt(status, 10));
             let errorMessage = parseInt(status, 10) >= 400 ? 'Error en la solicitud' : '';
 
+            console.log(chalk.yellow(`Logging HTTP request: ${message}`));  // Para depuración
+
             try {
-                const query = `
-                    INSERT INTO HTTPLogs 
-                        (Timestamp, RequestMethod, RequestURL, ClientIP, Referer, UserAgent, LogLevel, HTTPStatus, ResponseTime, ErrorMessage) 
-                    VALUES (NOW(), ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                `;
-                await pool.query(query, [method, url, ip, referer, userAgent, logLevel, status, parseFloat(responseTime), errorMessage]);
+                await HTTPLog.create({
+                    requestMethod: method,
+                    requestURL: url,
+                    clientIP: ip,
+                    referer: referer,
+                    userAgent: userAgent,
+                    logLevel: logLevel,
+                    httpStatus: parseInt(status, 10),
+                    responseTime: parseFloat(responseTime),
+                    errorMessage: errorMessage
+                });
             } catch (error) {
-                console.error("Error al insertar log en la base de datos:", error);
+                console.error(chalk.red("Error al insertar log en la base de datos:", error));
             }
         }
     }

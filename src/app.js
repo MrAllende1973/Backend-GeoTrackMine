@@ -9,54 +9,49 @@ import routes from './routes/index.routes.js';
 import cors from 'cors';
 import { errorHandler } from './middleware/error.middleware.js';
 import { initializeSockets } from './sockets/index.sockets.js';
+import { initializeQueue } from './services/gpsdata.services.js';
+import { logMiddleware } from './middleware/log.middleware.js';
+import chalk from 'chalk';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Logging de solicitudes HTTP
 app.use(morgan('combined'));
-
-// Configuración de CORS
 app.use(cors());
-
-// Middleware para analizar solicitudes con payloads JSON
 app.use(express.json());
+app.use(logMiddleware);  // Añadir el middleware de logging
 
-// Middleware para medir el tiempo de ejecución de cada solicitud
 app.use((req, res, next) => {
+    console.log(chalk.blue('-----------------------------------------------------'));
     console.time(`Request-Time: ${req.method} ${req.originalUrl}`);
     res.on('finish', () => {
         console.timeEnd(`Request-Time: ${req.method} ${req.originalUrl}`);
+        console.log(chalk.blue('-----------------------------------------------------'));
     });
     next();
 });
 
-// Montaje de las rutas API
 app.use('/api', routes);
-
-// Middleware para manejo de errores
 app.use(errorHandler);
 
-// Crear el servidor HTTP
 const server = createServer(app);
-
-// Inicializar Socket.io
 initializeSockets(server);
 
-// Función para iniciar el servidor
 const startServer = async () => {
+    console.log(chalk.blue('-----------------------------------------------------'));
     console.time('Server Initialization');
     try {
-        await initModels(); // Inicializar y sincronizar los modelos
+        await initModels();
+        initializeQueue(); // Inicializar la cola de Bull
         server.listen(PORT, () => {
-            console.log(`Servidor corriendo en puerto ${PORT}`);
+            console.log(chalk.green(`Servidor corriendo en puerto ${PORT}`));
             console.timeEnd('Server Initialization');
         });
     } catch (error) {
-        console.error('Error al iniciar la aplicación:', error);
+        console.error(chalk.red('Error al iniciar la aplicación:', error));
         console.timeEnd('Server Initialization');
     }
+    console.log(chalk.blue('-----------------------------------------------------'));
 };
 
-// Función anónima autoejecutable para iniciar la aplicación
 startServer();

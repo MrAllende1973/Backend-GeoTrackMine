@@ -1,11 +1,10 @@
-// routes/gpsdata.routes.js
 import { Router } from 'express';
 import multer from 'multer';
-import { uploadGPSDataFile } from '../controllers/gpsdata.controller.js';
+import { uploadGPSDataFile, getJobStatus } from '../controllers/gpsdata.controller.js';
+import chalk from 'chalk';
 
 const router = Router();
 
-// Configuración de multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -19,16 +18,18 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post('/upload', (req, res, next) => {
-    console.time('routeHandler');
+    console.log(chalk.green(`Petición recibida: ${req.method} ${req.originalUrl}`));
     upload.single('file')(req, res, (err) => {
         if (err) {
-            console.timeEnd('routeHandler');
             return next(err);
         }
-        uploadGPSDataFile(req, res).finally(() => {
-            console.timeEnd('routeHandler');
-        });
+        uploadGPSDataFile(req, res, next);
     });
+});
+
+router.get('/job/:id', (req, res, next) => {
+    console.log(chalk.green(`Petición recibida: ${req.method} ${req.originalUrl}`));
+    getJobStatus(req, res, next);
 });
 
 export default router;

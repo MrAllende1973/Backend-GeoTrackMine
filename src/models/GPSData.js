@@ -1,30 +1,30 @@
-// models/GPSData.js
 import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../config/db.js';
 import ExcelJS from 'exceljs';
 import csv from 'csv-parser';
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
+import chalk from 'chalk';
 
 class GPSData extends Model {
     static async loadFromCSV(filePath) {
-        console.time('loadFromCSV');
-        const fileID = uuidv4(); // Generar un ID único para todo el archivo
+        console.time(chalk.magenta('loadFromCSV'));
+        const fileID = uuidv4();
         const rows = await this.parseCSV(filePath);
         await this.insertInBatches(fileID, rows);
-        console.timeEnd('loadFromCSV');
+        console.timeEnd(chalk.magenta('loadFromCSV'));
     }
 
     static async loadFromXLSX(filePath) {
-        console.time('loadFromXLSX');
-        const fileID = uuidv4(); // Generar un ID único para todo el archivo
+        console.time(chalk.magenta('loadFromXLSX'));
+        const fileID = uuidv4();
         const rows = await this.parseExcel(filePath);
         await this.insertInBatches(fileID, rows);
-        console.timeEnd('loadFromXLSX');
+        console.timeEnd(chalk.magenta('loadFromXLSX'));
     }
 
     static async parseCSV(filePath) {
-        console.time('parseCSV');
+        console.time(chalk.magenta('parseCSV'));
         return new Promise((resolve, reject) => {
             const rows = [];
             fs.createReadStream(filePath)
@@ -33,18 +33,18 @@ class GPSData extends Model {
                     rows.push(row);
                 })
                 .on('end', () => {
-                    console.timeEnd('parseCSV');
+                    console.timeEnd(chalk.magenta('parseCSV'));
                     resolve(rows);
                 })
                 .on('error', (error) => {
-                    console.timeEnd('parseCSV');
+                    console.timeEnd(chalk.magenta('parseCSV'));
                     reject(error);
                 });
         });
     }
 
     static async parseExcel(filePath) {
-        console.time('parseExcel');
+        console.time(chalk.magenta('parseExcel'));
         const workbook = new ExcelJS.Workbook();
         await workbook.xlsx.readFile(filePath);
         const worksheet = workbook.worksheets[0];
@@ -65,13 +65,13 @@ class GPSData extends Model {
             }
         });
 
-        console.timeEnd('parseExcel');
+        console.timeEnd(chalk.magenta('parseExcel'));
         return rows;
     }
 
     static async insertInBatches(fileID, rows) {
-        console.time('insertInBatches');
-        const batchSize = 8000; // Tamaño del lote
+        console.time(chalk.magenta('insertInBatches'));
+        const batchSize = 8000;
 
         try {
             await sequelize.transaction(async (t) => {
@@ -82,14 +82,13 @@ class GPSData extends Model {
                 }
             });
         } catch (error) {
-            console.error('Error inserting batches:', error.message);
-            throw error; // Rethrow the error after logging it
+            console.error(chalk.red('Error inserting batches:', error.message));
+            throw error;
         }
-        console.timeEnd('insertInBatches');
+        console.timeEnd(chalk.magenta('insertInBatches'));
     }
 
     static async insertBatch(fileID, jsonData, transaction) {
-        //console.time('insertBatch');
         try {
             const query = 'CALL InsertGPSData(:fileID, :jsonData)';
             await sequelize.query(query, {
@@ -98,10 +97,9 @@ class GPSData extends Model {
                 transaction
             });
         } catch (error) {
-            console.error('Error during batch insert:', error.message);
-            throw error; // Rethrow the error after logging it
+            console.error(chalk.red('Error during batch insert:', error.message));
+            throw error;
         }
-        //console.timeEnd('insertBatch');
     }
 }
 

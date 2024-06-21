@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
+import chalk from 'chalk';
 
 dotenv.config();
 
@@ -18,7 +19,11 @@ const sequelize = new Sequelize(
             acquire: 60000,
             idle: 10000,
         },
-        logging: false, // Desactivar el logging
+        logging: false,
+        dialectOptions: {
+            supportBigNumbers: true,
+            bigNumberStrings: true,
+        }
     }
 );
 console.timeEnd('Database Initialization');
@@ -27,10 +32,10 @@ const connectToDatabase = async () => {
     console.time('Database Connection');
     try {
         await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
+        console.log(chalk.green('Conexión establecida con éxito.'));
         console.timeEnd('Database Connection');
     } catch (error) {
-        console.error('Unable to connect to the database:', error);
+        console.error(chalk.red('No se puede conectar a la base de datos:', error));
         console.timeEnd('Database Connection');
         process.exit(1);
     }
