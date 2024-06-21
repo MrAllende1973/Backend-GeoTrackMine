@@ -7,19 +7,19 @@ import { v4 as uuidv4 } from 'uuid';
 import chalk from 'chalk';
 
 class GPSData extends Model {
-    static async loadFromCSV(filePath) {
+    static async loadFromCSV(filePath, originalFileName, fileDate) {
         console.time(chalk.magenta('loadFromCSV'));
         const fileID = uuidv4();
         const rows = await this.parseCSV(filePath);
-        await this.insertInBatches(fileID, rows);
+        await this.insertInBatches(fileID, rows, originalFileName, fileDate);
         console.timeEnd(chalk.magenta('loadFromCSV'));
     }
 
-    static async loadFromXLSX(filePath) {
+    static async loadFromXLSX(filePath, originalFileName, fileDate) {
         console.time(chalk.magenta('loadFromXLSX'));
         const fileID = uuidv4();
         const rows = await this.parseExcel(filePath);
-        await this.insertInBatches(fileID, rows);
+        await this.insertInBatches(fileID, rows, originalFileName, fileDate);
         console.timeEnd(chalk.magenta('loadFromXLSX'));
     }
 
@@ -69,7 +69,7 @@ class GPSData extends Model {
         return rows;
     }
 
-    static async insertInBatches(fileID, rows) {
+    static async insertInBatches(fileID, rows, originalFileName, fileDate) {
         console.time(chalk.magenta('insertInBatches'));
         const batchSize = 8000;
 
@@ -78,7 +78,8 @@ class GPSData extends Model {
                 for (let i = 0; i < rows.length; i += batchSize) {
                     const batch = rows.slice(i, i + batchSize);
                     const jsonData = JSON.stringify(batch);
-                    await this.insertBatch(fileID, jsonData, t);
+                    await this.insertBatch(fileID, jsonData, originalFileName, fileDate, t);
+                    console.log(chalk.blue(`Inserted batch ${i / batchSize + 1} of ${Math.ceil(rows.length / batchSize)}`));
                 }
             });
         } catch (error) {
@@ -88,11 +89,11 @@ class GPSData extends Model {
         console.timeEnd(chalk.magenta('insertInBatches'));
     }
 
-    static async insertBatch(fileID, jsonData, transaction) {
+    static async insertBatch(fileID, jsonData, originalFileName, fileDate, transaction) {
         try {
-            const query = 'CALL InsertGPSData(:fileID, :jsonData)';
+            const query = 'CALL InsertGPSData(:fileID, :jsonData, :originalFileName, :fileDate)';
             await sequelize.query(query, {
-                replacements: { fileID, jsonData },
+                replacements: { fileID, jsonData, originalFileName, fileDate },
                 raw: true,
                 transaction
             });
@@ -115,6 +116,18 @@ GPSData.init({
     },
     data: {
         type: DataTypes.JSON,
+        allowNull: false,
+    },
+    timestamp: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+    },
+    originalFileName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    fileDate: {
+        type: DataTypes.DATE,
         allowNull: false,
     },
 }, {

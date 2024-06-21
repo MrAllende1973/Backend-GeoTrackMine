@@ -2,6 +2,12 @@ import { processGPSDataFile, getFileProcessingQueue } from '../services/gpsdata.
 import { createApiResponse } from '../utils/response.handle.js';
 import chalk from 'chalk';
 
+const formatDateForMySQL = (date) => {
+    const d = new Date(date);
+    const pad = (n) => (n < 10 ? '0' + n : n);
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+};
+
 export const uploadGPSDataFile = async (req, res) => {
     console.time(chalk.cyan('controller'));
     if (!req.file) {
@@ -13,6 +19,8 @@ export const uploadGPSDataFile = async (req, res) => {
                      req.file.mimetype === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ? 'excel' : 
                      'unsupported';
     const filePath = req.file.path;
+    const originalFileName = req.file.originalname;
+    const fileDate = formatDateForMySQL(new Date());
 
     try {
         if (fileType === 'unsupported') {
@@ -20,7 +28,7 @@ export const uploadGPSDataFile = async (req, res) => {
         }
         
         const queue = getFileProcessingQueue();
-        const job = await queue.add({ filePath, fileType });
+        const job = await queue.add({ filePath, fileType, originalFileName, fileDate });
 
         res.status(202).json(createApiResponse(true, `Archivo en cola para procesamiento. ID de trabajo: ${job.id}`, 202, { jobId: job.id }));
     } catch (error) {

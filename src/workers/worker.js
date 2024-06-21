@@ -27,10 +27,10 @@ const startWorker = async () => {
     }
 
     fileProcessingQueue.process(async (job) => {
-        const { filePath, fileType } = job.data;
+        const { filePath, fileType, originalFileName, fileDate } = job.data;
         try {
             console.log(chalk.yellow(`Processing file: ${filePath}`));
-            await processGPSDataFile(filePath, fileType);
+            await processGPSDataFile(filePath, fileType, originalFileName, fileDate);
             fs.unlink(filePath, (err) => {
                 if (err) {
                     console.error(chalk.red('Error deleting file:', err));

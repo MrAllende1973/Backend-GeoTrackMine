@@ -21,14 +21,14 @@ export const getFileProcessingQueue = () => {
     return fileProcessingQueue;
 };
 
-export const processGPSDataFile = async (filePath, fileType) => {
+export const processGPSDataFile = async (filePath, fileType, originalFileName, fileDate) => {
     console.time(chalk.cyan('service'));
     try {
         console.log(chalk.magenta(`Procesando archivo ${fileType === 'csv' ? 'CSV' : 'Excel'}: ${filePath}`));
         if (fileType === 'csv') {
-            await GPSData.loadFromCSV(filePath);
+            await GPSData.loadFromCSV(filePath, originalFileName, fileDate);
         } else if (fileType === 'excel') {
-            await GPSData.loadFromXLSX(filePath);
+            await GPSData.loadFromXLSX(filePath, originalFileName, fileDate);
         } else {
             throw new AppError('Tipo de archivo no soportado', 400);
         }

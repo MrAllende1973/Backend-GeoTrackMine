@@ -22,11 +22,11 @@ app.use(express.json());
 app.use(logMiddleware);  // Añadir el middleware de logging
 
 app.use((req, res, next) => {
-    console.log(chalk.blue('-----------------------------------------------------'));
+    console.log(chalk.blue('----------------------------------------------------------------------------------------------------------'));
     console.time(`Request-Time: ${req.method} ${req.originalUrl}`);
     res.on('finish', () => {
         console.timeEnd(`Request-Time: ${req.method} ${req.originalUrl}`);
-        console.log(chalk.blue('-----------------------------------------------------'));
+        console.log(chalk.blue('----------------------------------------------------------------------------------------------------------\n'));
     });
     next();
 });
@@ -38,7 +38,7 @@ const server = createServer(app);
 initializeSockets(server);
 
 const startServer = async () => {
-    console.log(chalk.blue('-----------------------------------------------------'));
+    console.log(chalk.blue('----------------------------------------------------------------------------------------------------------'));
     console.time('Server Initialization');
     try {
         await initModels();
@@ -51,7 +51,7 @@ const startServer = async () => {
         console.error(chalk.red('Error al iniciar la aplicación:', error));
         console.timeEnd('Server Initialization');
     }
-    console.log(chalk.blue('-----------------------------------------------------'));
+    console.log(chalk.blue('----------------------------------------------------------------------------------------------------------\n'));
 };
 
 startServer();
