@@ -5,25 +5,72 @@ import csv from 'csv-parser';
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import chalk from 'chalk';
+import { logErrorToDatabase, AppError } from '../utils/error.handle.js';
+import { Mutex } from 'async-mutex';
+import crypto from 'crypto';
+import { createLogger, transports, format } from 'winston';
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/gpsdata.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
+
+const insertBatchMutex = new Mutex();
 
 class GPSData extends Model {
     static async loadFromCSV(filePath, originalFileName, fileDate) {
+        if (!fs.existsSync(filePath)) {
+            throw new AppError(`File not found: ${filePath}`, 404);
+        }
+
+        logger.info(`Loading data from CSV: ${filePath}`);
         console.time(chalk.magenta('loadFromCSV'));
         const fileID = uuidv4();
         const rows = await this.parseCSV(filePath);
-        await this.insertInBatches(fileID, rows, originalFileName, fileDate);
+        const originalHash = this.calculateHash(rows);
+
+        await this.insertInBatches(fileID, rows, originalFileName, fileDate, originalHash);
         console.timeEnd(chalk.magenta('loadFromCSV'));
     }
 
     static async loadFromXLSX(filePath, originalFileName, fileDate) {
+        if (!fs.existsSync(filePath)) {
+            throw new AppError(`File not found: ${filePath}`, 404);
+        }
+
+        logger.info(`Loading data from XLSX: ${filePath}`);
         console.time(chalk.magenta('loadFromXLSX'));
         const fileID = uuidv4();
         const rows = await this.parseExcel(filePath);
-        await this.insertInBatches(fileID, rows, originalFileName, fileDate);
+        const originalHash = this.calculateHash(rows);
+
+        await this.insertInBatches(fileID, rows, originalFileName, fileDate, originalHash);
         console.timeEnd(chalk.magenta('loadFromXLSX'));
     }
 
     static async parseCSV(filePath) {
+        logger.info(`Parsing CSV: ${filePath}`);
         console.time(chalk.magenta('parseCSV'));
         return new Promise((resolve, reject) => {
             const rows = [];
@@ -44,6 +91,7 @@ class GPSData extends Model {
     }
 
     static async parseExcel(filePath) {
+        logger.info(`Parsing Excel: ${filePath}`);
         console.time(chalk.magenta('parseExcel'));
         const workbook = new ExcelJS.Workbook();
         await workbook.xlsx.readFile(filePath);
@@ -69,24 +117,58 @@ class GPSData extends Model {
         return rows;
     }
 
-    static async insertInBatches(fileID, rows, originalFileName, fileDate) {
+    static calculateHash(rows) {
+        const hash = crypto.createHash('sha256');
+        rows.forEach(row => {
+            hash.update(JSON.stringify(row));
+        });
+        return hash.digest('hex');
+    }
+
+    static async insertInBatches(fileID, rows, originalFileName, fileDate, originalHash) {
+        logger.info('Inserting data in batches');
         console.time(chalk.magenta('insertInBatches'));
         const batchSize = 8000;
+        const maxRetries = 3;
+        let combinedHash = crypto.createHash('sha256');
 
-        try {
-            await sequelize.transaction(async (t) => {
-                for (let i = 0; i < rows.length; i += batchSize) {
-                    const batch = rows.slice(i, i + batchSize);
-                    const jsonData = JSON.stringify(batch);
-                    await this.insertBatch(fileID, jsonData, originalFileName, fileDate, t);
-                    console.log(chalk.blue(`Inserted batch ${i / batchSize + 1} of ${Math.ceil(rows.length / batchSize)}`));
+        for (let i = 0; i < rows.length; i += batchSize) {
+            const batch = rows.slice(i, i + batchSize);
+            const jsonData = JSON.stringify(batch);
+            let success = false;
+            let retries = 0;
+
+            while (!success && retries < maxRetries) {
+                try {
+                    await insertBatchMutex.runExclusive(async () => {
+                        await sequelize.transaction(async (t) => {
+                            await this.insertBatch(fileID, jsonData, originalFileName, fileDate, t);
+                        });
+                    });
+
+                    batch.forEach(row => combinedHash.update(JSON.stringify(row)));
+                    logger.info(`Inserted batch ${i / batchSize + 1} of ${Math.ceil(rows.length / batchSize)}`);
+                    success = true;
+                } catch (error) {
+                    retries += 1;
+                    await logErrorToDatabase(new AppError(error.message, 500), { path: 'insertInBatches', method: 'insertBatch' });
+                    logger.error(`Error inserting batch ${i / batchSize + 1}, retrying (${retries}/${maxRetries}):`, error.message);
+                    if (retries >= maxRetries) {
+                        logger.error('Max retries reached, aborting batch insert.');
+                        throw error;
+                    }
                 }
-            });
-        } catch (error) {
-            console.error(chalk.red('Error inserting batches:', error.message));
-            throw error;
+            }
         }
+
+        const finalHash = combinedHash.digest('hex');
+        if (finalHash !== originalHash) {
+            logger.error('Data verification failed: hashes do not match');
+            throw new AppError('Data verification failed: hashes do not match', 500);
+        }
+
         console.timeEnd(chalk.magenta('insertInBatches'));
+        logger.info('Data inserted successfully and verified');
     }
 
     static async insertBatch(fileID, jsonData, originalFileName, fileDate, transaction) {
@@ -98,7 +180,7 @@ class GPSData extends Model {
                 transaction
             });
         } catch (error) {
-            console.error(chalk.red('Error during batch insert:', error.message));
+            logger.error('Error during batch insert:', error.message);
             throw error;
         }
     }

@@ -2,6 +2,34 @@ import GPSData from '../models/GPSData.js';
 import { AppError } from '../utils/error.handle.js';
 import Bull from 'bull';
 import chalk from 'chalk';
+import fs from 'fs';
+import { createLogger, transports, format } from 'winston';
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/services.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
 
 let fileProcessingQueue;
 
@@ -24,7 +52,11 @@ export const getFileProcessingQueue = () => {
 export const processGPSDataFile = async (filePath, fileType, originalFileName, fileDate) => {
     console.time(chalk.cyan('service'));
     try {
-        console.log(chalk.magenta(`Procesando archivo ${fileType === 'csv' ? 'CSV' : 'Excel'}: ${filePath}`));
+        if (!fs.existsSync(filePath)) {
+            throw new AppError(`File not found: ${filePath}`, 404);
+        }
+
+        logger.info(`Processing file ${fileType === 'csv' ? 'CSV' : 'Excel'}: ${filePath}`);
         if (fileType === 'csv') {
             await GPSData.loadFromCSV(filePath, originalFileName, fileDate);
         } else if (fileType === 'excel') {
@@ -32,13 +64,15 @@ export const processGPSDataFile = async (filePath, fileType, originalFileName, f
         } else {
             throw new AppError('Tipo de archivo no soportado', 400);
         }
-        console.log(chalk.green('Archivo procesado y datos almacenados con éxito'));
+        logger.info('Archivo procesado y datos almacenados con éxito');
     } catch (error) {
-        console.error(chalk.red(`Error al procesar el archivo: ${error.message}`));
-        if (error.errors) {
-            console.error(chalk.red('Detalles del error de validación:', error.errors));
+        if (error.code === 'ENOENT' || error.statusCode === 404) {
+            logger.error(`File not found: ${filePath}`);
+            throw new AppError(`File not found: ${filePath}`, 404);
+        } else {
+            logger.error(`Error al procesar el archivo: ${error.message}`);
+            throw new AppError(`Error al procesar el archivo: ${error.message}`, 500, error.errors);
         }
-        throw new AppError(`Error al procesar el archivo: ${error.message}`, 500, error.errors);
     } finally {
         console.timeEnd(chalk.cyan('service'));
     }

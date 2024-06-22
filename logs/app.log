@@ -1,0 +1,90 @@
+2024-06-22 05:14:29 [INFO]: Starting server initialization...
+2024-06-22 05:14:29 [INFO]: Server running on port 3005
+2024-06-22 05:14:37 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|129 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:15:10 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|500|20 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:15:11 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|500|31 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:15:14 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|400|2 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:46 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|400|2 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:48 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|400|5 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:54 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|175 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:55 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|166 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:56 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|171 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:57 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|137 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:58 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|124 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:58 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|200 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:18:59 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|282 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:19:00 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|206 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:19:01 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|483 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:19:02 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|98 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:19:02 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|228 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:21:30 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|5470 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:25:24 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|8 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:25:43 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|4948 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:25:46 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|2719 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:25:54 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|6914 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:02 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|6533 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:09 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|6460 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:20 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|9606 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:29 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|7840 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:40 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|9812 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:44 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|27 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:49 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|18 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:52 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|573 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 05:26:58 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|2985 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:07:34 [INFO]: Starting server initialization...
+2024-06-22 06:07:34 [INFO]: Server running on port 3005
+2024-06-22 06:07:39 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|136 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:06 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|5749 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:12 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|4244 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:17 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|4333 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:25 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|6763 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:41 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|899 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:44 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|27 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:46 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|11 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:51 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|500|53 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:57 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|215 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:08:58 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|461 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-06-22 06:09:00 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|119 ms|::1|-|PostmanRuntime/7.39.0|
+

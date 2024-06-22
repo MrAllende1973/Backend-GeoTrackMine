@@ -1,0 +1,126 @@
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Starting worker initialization...
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Starting worker initialization...
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Database connected successfully.
+2024-06-22 05:14:33 [INFO]: Worker is running
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Starting worker initialization...
+2024-06-22 05:14:33 [INFO]: Database connected successfully.
+2024-06-22 05:14:33 [INFO]: Database connected successfully.
+2024-06-22 05:14:33 [INFO]: Worker is running
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Worker is running
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:33 [INFO]: Starting worker initialization...
+2024-06-22 05:14:33 [INFO]: Database connected successfully.
+2024-06-22 05:14:33 [INFO]: Worker is running
+2024-06-22 05:14:33 [INFO]: -----------------------------------------------------
+2024-06-22 05:14:37 [INFO]: Processing file: uploads\file-1719047676942-810842985
+2024-06-22 05:14:52 [INFO]: File deleted: uploads\file-1719047676942-810842985
+2024-06-22 05:18:54 [INFO]: Processing file: uploads\file-1719047934786-51919705
+2024-06-22 05:18:55 [INFO]: Processing file: uploads\file-1719047935674-103117716
+2024-06-22 05:18:56 [INFO]: Processing file: uploads\file-1719047936524-244986911
+2024-06-22 05:18:57 [INFO]: Processing file: uploads\file-1719047937337-308095981
+2024-06-22 05:19:18 [INFO]: Processing file: uploads\file-1719047938171-630753495
+2024-06-22 05:19:18 [INFO]: File deleted: uploads\file-1719047934786-51919705
+2024-06-22 05:19:19 [INFO]: Processing file: uploads\file-1719047938732-88067290
+2024-06-22 05:19:19 [INFO]: File deleted: uploads\file-1719047935674-103117716
+2024-06-22 05:19:20 [INFO]: Processing file: uploads\file-1719047939447-965995103
+2024-06-22 05:19:20 [INFO]: File deleted: uploads\file-1719047936524-244986911
+2024-06-22 05:19:21 [INFO]: Processing file: uploads\file-1719047939999-507288620
+2024-06-22 05:19:21 [INFO]: File deleted: uploads\file-1719047937337-308095981
+2024-06-22 05:19:40 [INFO]: File deleted: uploads\file-1719047938171-630753495
+2024-06-22 05:19:40 [INFO]: Processing file: uploads\file-1719047940752-154530801
+2024-06-22 05:19:41 [INFO]: File deleted: uploads\file-1719047938732-88067290
+2024-06-22 05:19:41 [INFO]: Processing file: uploads\file-1719047941921-413457610
+2024-06-22 05:19:43 [INFO]: Processing file: uploads\file-1719047942515-764601177
+2024-06-22 05:19:43 [INFO]: File deleted: uploads\file-1719047939447-965995103
+2024-06-22 05:19:44 [INFO]: File deleted: uploads\file-1719047939999-507288620
+2024-06-22 05:19:59 [INFO]: File deleted: uploads\file-1719047940752-154530801
+2024-06-22 05:20:00 [INFO]: File deleted: uploads\file-1719047941921-413457610
+2024-06-22 05:20:03 [INFO]: File deleted: uploads\file-1719047942515-764601177
+2024-06-22 05:21:30 [INFO]: Processing file: uploads\file-1719048085213-213274790
+2024-06-22 05:23:50 [INFO]: File deleted: uploads\file-1719048085213-213274790
+2024-06-22 05:25:24 [INFO]: Processing file: uploads\file-1719048324477-23619765
+2024-06-22 05:25:25 [INFO]: File deleted: uploads\file-1719048324477-23619765
+2024-06-22 05:25:43 [INFO]: Processing file: uploads\file-1719048338326-499833740
+2024-06-22 05:25:46 [INFO]: Processing file: uploads\file-1719048343999-710526323
+2024-06-22 05:25:54 [INFO]: Processing file: uploads\file-1719048347694-443746535
+2024-06-22 05:26:02 [INFO]: Processing file: uploads\file-1719048355513-330430933
+2024-06-22 05:39:38 [INFO]: File deleted: uploads\file-1719048338326-499833740
+2024-06-22 05:39:43 [ERROR]: File not found: uploads\file-1719048338326-499833740
+2024-06-22 05:39:45 [INFO]: Processing file: uploads\file-1719048355513-330430933
+2024-06-22 05:40:09 [INFO]: File deleted: uploads\file-1719048347694-443746535
+2024-06-22 05:40:14 [ERROR]: File not found: uploads\file-1719048347694-443746535
+2024-06-22 05:40:14 [INFO]: Processing file: uploads\file-1719048343999-710526323
+2024-06-22 05:40:47 [INFO]: File deleted: uploads\file-1719048343999-710526323
+2024-06-22 05:40:52 [INFO]: Processing file: uploads\file-1719048362806-439216773
+2024-06-22 05:45:56 [INFO]: File deleted: uploads\file-1719048355513-330430933
+2024-06-22 05:46:01 [INFO]: Processing file: uploads\file-1719048370601-638330046
+2024-06-22 05:46:15 [INFO]: File deleted: uploads\file-1719048362806-439216773
+2024-06-22 05:46:15 [INFO]: Processing file: uploads\file-1719048381884-193726049
+2024-06-22 05:46:51 [ERROR]: Error deleting file: ENOENT: no such file or directory, unlink 'C:\Users\cbaut\OneDrive\SSD\Universidad\Semestres\2024_1_Semestre\Proyecto IV\GeoTrackMine\API_REST\uploads\file-1719048343999-710526323'
+2024-06-22 05:46:56 [INFO]: Processing file: uploads\file-1719048391154-454061258
+2024-06-22 05:51:04 [INFO]: File deleted: uploads\file-1719048370601-638330046
+2024-06-22 05:51:04 [INFO]: Processing file: uploads\file-1719048391154-454061258
+2024-06-22 05:51:09 [INFO]: Processing file: uploads\file-1719048404357-641919957
+2024-06-22 05:51:09 [INFO]: File deleted: uploads\file-1719048381884-193726049
+2024-06-22 05:51:17 [INFO]: Processing file: uploads\file-1719048409829-802591218
+2024-06-22 05:51:17 [INFO]: File deleted: uploads\file-1719048404357-641919957
+2024-06-22 05:51:17 [INFO]: Processing file: uploads\file-1719048412222-775861822
+2024-06-22 05:51:17 [INFO]: File deleted: uploads\file-1719048409829-802591218
+2024-06-22 05:51:52 [INFO]: Processing file: uploads\file-1719048415318-263304267
+2024-06-22 05:51:52 [INFO]: File deleted: uploads\file-1719048412222-775861822
+2024-06-22 05:52:22 [INFO]: File deleted: uploads\file-1719048391154-454061258
+2024-06-22 05:54:33 [ERROR]: Error deleting file: ENOENT: no such file or directory, unlink 'C:\Users\cbaut\OneDrive\SSD\Universidad\Semestres\2024_1_Semestre\Proyecto IV\GeoTrackMine\API_REST\uploads\file-1719048391154-454061258'
+2024-06-22 05:54:49 [INFO]: File deleted: uploads\file-1719048415318-263304267
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: Starting worker initialization...
+2024-06-22 06:07:37 [INFO]: Starting worker initialization...
+2024-06-22 06:07:37 [INFO]: Starting worker initialization...
+2024-06-22 06:07:37 [INFO]: Database connected successfully.
+2024-06-22 06:07:37 [INFO]: Database connected successfully.
+2024-06-22 06:07:37 [INFO]: Worker is running
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: Worker is running
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: Database connected successfully.
+2024-06-22 06:07:37 [INFO]: Worker is running
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:37 [INFO]: Starting worker initialization...
+2024-06-22 06:07:37 [INFO]: Database connected successfully.
+2024-06-22 06:07:37 [INFO]: Worker is running
+2024-06-22 06:07:37 [INFO]: -----------------------------------------------------
+2024-06-22 06:07:39 [INFO]: Processing file: uploads\file-1719050859191-923159508
+2024-06-22 06:07:56 [INFO]: File deleted: uploads\file-1719050859191-923159508
+2024-06-22 06:08:06 [INFO]: Processing file: uploads\file-1719050880821-69823035
+2024-06-22 06:08:11 [INFO]: Processing file: uploads\file-1719050887775-123316155
+2024-06-22 06:08:17 [INFO]: Processing file: uploads\file-1719050893297-95163832
+2024-06-22 06:08:25 [INFO]: Processing file: uploads\file-1719050899133-296217358
+2024-06-22 06:22:47 [INFO]: File deleted: uploads\file-1719050880821-69823035
+2024-06-22 06:22:52 [INFO]: Processing file: uploads\file-1719050899133-296217358
+2024-06-22 06:23:04 [INFO]: File deleted: uploads\file-1719050893297-95163832
+2024-06-22 06:23:06 [INFO]: File deleted: uploads\file-1719050899133-296217358
+2024-06-22 06:23:09 [INFO]: Processing file: uploads\file-1719050887775-123316155
+2024-06-22 06:23:11 [ERROR]: File not found: uploads\file-1719050893297-95163832
+2024-06-22 06:23:11 [ERROR]: File not found: uploads\file-1719050880821-69823035
+2024-06-22 06:23:11 [INFO]: Processing file: uploads\file-1719050920788-928458064
+2024-06-22 06:23:31 [INFO]: Processing file: uploads\file-1719050924252-96095055
+2024-06-22 06:23:31 [INFO]: File deleted: uploads\file-1719050920788-928458064
+2024-06-22 06:23:32 [INFO]: Processing file: uploads\file-1719050926948-71675766
+2024-06-22 06:23:32 [INFO]: File deleted: uploads\file-1719050924252-96095055
+2024-06-22 06:23:32 [INFO]: File deleted: uploads\file-1719050926948-71675766
+2024-06-22 06:23:32 [INFO]: Processing file: uploads\file-1719050937365-551634503
+2024-06-22 06:24:00 [INFO]: File deleted: uploads\file-1719050937365-551634503
+2024-06-22 06:24:00 [INFO]: Processing file: uploads\file-1719050938386-335619195
+2024-06-22 06:24:29 [INFO]: Processing file: uploads\file-1719050939978-878864672
+2024-06-22 06:24:29 [INFO]: File deleted: uploads\file-1719050938386-335619195
+2024-06-22 06:24:56 [INFO]: File deleted: uploads\file-1719050939978-878864672
+2024-06-22 06:26:35 [WARN]: File already deleted: uploads\file-1719050899133-296217358
+2024-06-22 06:26:52 [INFO]: File deleted: uploads\file-1719050887775-123316155

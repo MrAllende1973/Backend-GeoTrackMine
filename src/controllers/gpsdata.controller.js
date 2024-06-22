@@ -1,6 +1,33 @@
 import { processGPSDataFile, getFileProcessingQueue } from '../services/gpsdata.services.js';
 import { createApiResponse } from '../utils/response.handle.js';
+import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/controller.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
 
 const formatDateForMySQL = (date) => {
     const d = new Date(date);
@@ -10,6 +37,7 @@ const formatDateForMySQL = (date) => {
 
 export const uploadGPSDataFile = async (req, res) => {
     console.time(chalk.cyan('controller'));
+    logger.info('Uploading GPS data file');
     if (!req.file) {
         console.timeEnd(chalk.cyan('controller'));
         return res.status(400).json(createApiResponse(false, 'No se ha subido ningún archivo', 400, null));
@@ -32,9 +60,9 @@ export const uploadGPSDataFile = async (req, res) => {
 
         res.status(202).json(createApiResponse(true, `Archivo en cola para procesamiento. ID de trabajo: ${job.id}`, 202, { jobId: job.id }));
     } catch (error) {
-        console.error(chalk.red(`Error en el controlador: ${error.message}`));
+        logger.error(`Error in controller: ${error.message}`);
         if (error.errors) {
-            console.error(chalk.red('Detalles del error de validación:', error.errors));
+            logger.error('Validation error details:', error.errors);
         }
         res.status(500).json(createApiResponse(false, `Error al procesar el archivo: ${error.message}`, 500, error.errors));
     } finally {

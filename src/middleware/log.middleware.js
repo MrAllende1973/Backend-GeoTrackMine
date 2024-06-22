@@ -1,5 +1,6 @@
 import morgan from 'morgan';
 import HTTPLog from '../models/HTTPLog.js';
+import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
 // Configuración de tokens personalizados
@@ -16,6 +17,32 @@ morgan.token('response-time', (req, res, digits) => {
 // Formato personalizado para Morgan
 const morganFormat = ':method|:url|:status|:response-time ms|:ip|:referer|:user-agent|';
 
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp({
+            format: 'YYYY-MM-DD HH:mm:ss'
+        }),
+        format.printf(({ timestamp, level, message }) => {
+            let colorizer = level === 'info' ? chalk.green :
+                            level === 'warn' ? chalk.yellow :
+                            level === 'error' ? chalk.red : chalk.blue;
+            return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+        })
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/app.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
+
 export const logMiddleware = morgan(morganFormat, {
     immediate: false,
     stream: {
@@ -24,7 +51,7 @@ export const logMiddleware = morgan(morganFormat, {
             let logLevel = determineLogLevel(parseInt(status, 10));
             let errorMessage = parseInt(status, 10) >= 400 ? 'Error en la solicitud' : '';
 
-            console.log(chalk.yellow(`Logging HTTP request: ${message}`));  // Para depuración
+            logger.info(`Logging HTTP request: ${message}`);  // Para depuración
 
             try {
                 await HTTPLog.create({
@@ -39,8 +66,11 @@ export const logMiddleware = morgan(morganFormat, {
                     errorMessage: errorMessage
                 });
             } catch (error) {
-                console.error(chalk.red("Error al insertar log en la base de datos:", error));
+                logger.error("Error al insertar log en la base de datos:", error);
             }
+
+            // Añadir línea de separación después de cada registro de solicitud
+            console.log(chalk.blue('----------------------------------------------------------------------------------------------------------\n'));
         }
     }
 });

@@ -1,20 +1,51 @@
 import Log from '../models/Log.js';
+import { createLogger, transports, format } from 'winston';
+import chalk from 'chalk';
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/errors.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
 
 // Función para registrar errores en la base de datos
-const logErrorToDatabase = async (err, req) => {
+const logErrorToDatabase = async (err, context = {}) => {
     try {
         await Log.create({
             level: err.status || 'error',
             message: err.message,
-            component: req.path,
+            component: context.path || 'unknown',
             details: {
-                method: req.method,
+                method: context.method || 'unknown',
+                user: context.user || 'unknown',
+                ip: context.ip || 'unknown',
                 stack: err.stack,
                 statusCode: err.statusCode || 500,
             },
         });
+        logger.error(`Logged error to database: ${err.message}`);
     } catch (error) {
-        console.error('Error logging to database:', error);
+        logger.error('Error logging to database:', error);
     }
 };
 

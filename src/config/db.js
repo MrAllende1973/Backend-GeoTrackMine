@@ -1,8 +1,35 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
+import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
 dotenv.config();
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/db.log', format: format.combine(
+            format.timestamp({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            }),
+            format.printf(({ timestamp, level, message }) => {
+                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
+            })
+        )})
+    ]
+});
 
 console.time('Database Initialization');
 const sequelize = new Sequelize(
@@ -32,10 +59,10 @@ const connectToDatabase = async () => {
     console.time('Database Connection');
     try {
         await sequelize.authenticate();
-        console.log(chalk.green('Conexión establecida con éxito.'));
+        logger.info('Conexión establecida con éxito.');
         console.timeEnd('Database Connection');
     } catch (error) {
-        console.error(chalk.red('No se puede conectar a la base de datos:', error));
+        logger.error('No se puede conectar a la base de datos:', error);
         console.timeEnd('Database Connection');
         process.exit(1);
     }

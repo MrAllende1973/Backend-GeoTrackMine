@@ -3,6 +3,7 @@ import { readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { AppError } from '../utils/error.handle.js';
+import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
 // Recreando la funcionalidad de __dirname para módulos ES
@@ -11,6 +12,25 @@ const __dirname = dirname(__filename);
 
 const PATH_ROUTER = `${__dirname}`;
 const router = Router();
+
+const customFormat = format.printf(({ timestamp, level, message }) => {
+    let colorizer = level === 'info' ? chalk.green :
+                    level === 'warn' ? chalk.yellow :
+                    level === 'error' ? chalk.red : chalk.blue;
+    return `${chalk.blue(timestamp)} [${colorizer(level)}]: ${message}`;
+});
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp(),
+        customFormat
+    ),
+    transports: [
+        new transports.Console(),
+        new transports.File({ filename: 'logs/routes.log' })
+    ]
+});
 
 /**
  * Limpia el nombre del archivo, eliminando la extensión ".routes.js"
@@ -32,6 +52,7 @@ const loadRoutesFromFile = async (file) => {
             router.use(`/${cleanName}`, module.default);
             console.timeEnd(chalk.cyan(`Cargando rutas: /${cleanName}`));
         } catch (error) {
+            logger.error(`Error al cargar rutas de ${cleanName}: ${error.message}`);
             throw new AppError(`Error al cargar rutas de ${cleanName}: ${error.message}`, 500);
         }
     }
