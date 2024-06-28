@@ -12,3 +12,5 @@
 2024-06-22 06:21:14 [ERROR]: Logged error to database: write ENOBUFS
 2024-06-22 06:23:11 [ERROR]: Logged error to database: File not found: uploads\file-1719050893297-95163832
 2024-06-22 06:23:11 [ERROR]: Logged error to database: File not found: uploads\file-1719050880821-69823035
+2024-06-25 10:51:58 [ERROR]: Logged error to database: ENOENT: no such file or directory, open 'C:\Users\cbaut\Desktop\Proyecto IV\Backend-GeoTrackMine\uploads\file-1719327118424-358418827'
+2024-06-25 10:51:58 [ERROR]: Error: ENOENT: no such file or directory, open 'C:\Users\cbaut\Desktop\Proyecto IV\Backend-GeoTrackMine\uploads\file-1719327118424-358418827'

@@ -5,7 +5,8 @@ class AlertManager extends Model {}
 
 AlertManager.init({
     managerID: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
     },
     alertThresholds: {

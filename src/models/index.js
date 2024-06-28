@@ -4,6 +4,7 @@ import Alerta from './Alerta.js';
 import AlertManager from './AlertManager.js';
 import Despachador from './Despachador.js';
 import GPSData from './GPSData.js';
+import HTTPLog from './HTTPLog.js';
 import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
@@ -38,6 +39,7 @@ const initModels = async () => {
         await sequelize.authenticate();
         logger.info('Connection established successfully.');
 
+        // Sync all models
         await sequelize.sync();
         logger.info('All models were synchronized successfully.');
     } catch (error) {
@@ -45,4 +47,4 @@ const initModels = async () => {
     }
 };
 
-export { initModels, Log, Alerta, AlertManager, Despachador, GPSData };
+export { initModels, Log, Alerta, AlertManager, Despachador, GPSData, HTTPLog };

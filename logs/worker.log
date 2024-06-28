@@ -124,3 +124,249 @@
 2024-06-22 06:24:56 [INFO]: File deleted: uploads\file-1719050939978-878864672
 2024-06-22 06:26:35 [WARN]: File already deleted: uploads\file-1719050899133-296217358
 2024-06-22 06:26:52 [INFO]: File deleted: uploads\file-1719050887775-123316155
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: Starting worker initialization...
+2024-06-25 10:51:52 [INFO]: Starting worker initialization...
+2024-06-25 10:51:52 [INFO]: Database connected successfully.
+2024-06-25 10:51:52 [INFO]: Worker is running
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: Database connected successfully.
+2024-06-25 10:51:52 [INFO]: Worker is running
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: Starting worker initialization...
+2024-06-25 10:51:52 [INFO]: Database connected successfully.
+2024-06-25 10:51:52 [INFO]: Worker is running
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:51:52 [INFO]: Starting worker initialization...
+2024-06-25 10:51:52 [INFO]: Database connected successfully.
+2024-06-25 10:51:52 [INFO]: Worker is running
+2024-06-25 10:51:52 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: Starting worker initialization...
+2024-06-25 10:55:15 [INFO]: Starting worker initialization...
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: Starting worker initialization...
+2024-06-25 10:55:15 [INFO]: Database connected successfully.
+2024-06-25 10:55:15 [INFO]: Database connected successfully.
+2024-06-25 10:55:15 [INFO]: Worker is running
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: Worker is running
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: Database connected successfully.
+2024-06-25 10:55:15 [INFO]: Worker is running
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 10:55:15 [INFO]: Starting worker initialization...
+2024-06-25 10:55:15 [INFO]: Database connected successfully.
+2024-06-25 10:55:15 [INFO]: Worker is running
+2024-06-25 10:55:15 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: Starting worker initialization...
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: Database connected successfully.
+2024-06-25 11:00:16 [INFO]: Starting worker initialization...
+2024-06-25 11:00:16 [INFO]: Worker is running
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: Database connected successfully.
+2024-06-25 11:00:16 [INFO]: Worker is running
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: Starting worker initialization...
+2024-06-25 11:00:16 [INFO]: Database connected successfully.
+2024-06-25 11:00:16 [INFO]: Worker is running
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:16 [INFO]: Starting worker initialization...
+2024-06-25 11:00:16 [INFO]: Database connected successfully.
+2024-06-25 11:00:16 [INFO]: Worker is running
+2024-06-25 11:00:16 [INFO]: -----------------------------------------------------
+2024-06-25 11:00:40 [INFO]: Processing file: uploads\file-1719327640323-705789309
+2024-06-25 11:00:42 [INFO]: File deleted: uploads\file-1719327640323-705789309
+2024-06-25 11:04:11 [INFO]: Processing file: uploads\file-1719327846399-519120669
+2024-06-25 11:07:08 [INFO]: File deleted: uploads\file-1719327846399-519120669
+2024-06-25 11:34:51 [INFO]: Processing file: uploads\file-1719329685473-636033126
+2024-06-25 11:37:09 [INFO]: Processing file: uploads\file-1719329829575-515424329
+2024-06-25 11:37:12 [INFO]: File deleted: uploads\file-1719329829575-515424329
+2024-06-25 11:37:47 [INFO]: File deleted: uploads\file-1719329685473-636033126
+2024-06-25 11:49:28 [INFO]: Processing file: uploads\file-1719330568330-899818275
+2024-06-25 11:49:44 [INFO]: File deleted: uploads\file-1719330568330-899818275
+2024-06-25 11:49:53 [INFO]: Processing file: uploads\file-1719330593960-465781817
+2024-06-25 11:49:55 [INFO]: File deleted: uploads\file-1719330593960-465781817
+2024-06-25 11:49:59 [INFO]: Processing file: uploads\file-1719330598919-662321594
+2024-06-25 11:50:00 [INFO]: Processing file: uploads\file-1719330600171-665146048
+2024-06-25 11:50:01 [INFO]: Processing file: uploads\file-1719330601448-128277199
+2024-06-25 11:50:03 [INFO]: Processing file: uploads\file-1719330602567-571444523
+2024-06-25 11:50:26 [INFO]: Processing file: uploads\file-1719330603716-944766195
+2024-06-25 11:50:26 [INFO]: File deleted: uploads\file-1719330598919-662321594
+2024-06-25 11:50:30 [INFO]: File deleted: uploads\file-1719330600171-665146048
+2024-06-25 11:50:30 [INFO]: Processing file: uploads\file-1719330605097-759331302
+2024-06-25 11:50:33 [INFO]: File deleted: uploads\file-1719330601448-128277199
+2024-06-25 11:50:33 [INFO]: Processing file: uploads\file-1719330606565-229915504
+2024-06-25 11:50:34 [INFO]: File deleted: uploads\file-1719330602567-571444523
+2024-06-25 11:50:53 [INFO]: File deleted: uploads\file-1719330603716-944766195
+2024-06-25 11:50:56 [INFO]: File deleted: uploads\file-1719330605097-759331302
+2024-06-25 11:50:57 [INFO]: File deleted: uploads\file-1719330606565-229915504
+2024-06-25 11:51:09 [INFO]: Processing file: uploads\file-1719330669102-952706938
+2024-06-25 11:51:10 [INFO]: Processing file: uploads\file-1719330670327-281928480
+2024-06-25 11:51:11 [INFO]: Processing file: uploads\file-1719330671607-730882645
+2024-06-25 11:51:13 [INFO]: Processing file: uploads\file-1719330673132-818054215
+2024-06-25 11:51:38 [INFO]: File deleted: uploads\file-1719330669102-952706938
+2024-06-25 11:51:39 [INFO]: File deleted: uploads\file-1719330670327-281928480
+2024-06-25 11:51:40 [INFO]: File deleted: uploads\file-1719330671607-730882645
+2024-06-25 11:51:42 [INFO]: File deleted: uploads\file-1719330673132-818054215
+2024-06-25 11:55:36 [INFO]: Processing file: uploads\file-1719330930486-608424776
+2024-06-25 11:58:30 [INFO]: File deleted: uploads\file-1719330930486-608424776
+2024-06-25 12:43:56 [INFO]: Processing file: uploads\file-1719333830301-430364387
+2024-06-25 12:44:11 [INFO]: Processing file: uploads\file-1719333851530-421885085
+2024-06-25 12:44:16 [INFO]: Processing file: uploads\file-1719333856842-170719762
+2024-06-25 12:44:19 [INFO]: File deleted: uploads\file-1719333856842-170719762
+2024-06-25 12:44:31 [INFO]: File deleted: uploads\file-1719333851530-421885085
+2024-06-25 12:46:08 [INFO]: Processing file: uploads\file-1719333968380-618391854
+2024-06-25 12:46:10 [INFO]: File deleted: uploads\file-1719333968380-618391854
+2024-06-25 12:46:19 [INFO]: Processing file: uploads\file-1719333979681-145782300
+2024-06-25 12:46:20 [INFO]: Processing file: uploads\file-1719333980576-895532294
+2024-06-25 12:46:21 [INFO]: Processing file: uploads\file-1719333981374-950401807
+2024-06-25 12:46:22 [INFO]: File deleted: uploads\file-1719333979681-145782300
+2024-06-25 12:46:22 [INFO]: Processing file: uploads\file-1719333982347-290409608
+2024-06-25 12:46:23 [INFO]: File deleted: uploads\file-1719333980576-895532294
+2024-06-25 12:46:23 [INFO]: Processing file: uploads\file-1719333983366-570100446
+2024-06-25 12:46:24 [INFO]: File deleted: uploads\file-1719333981374-950401807
+2024-06-25 12:46:25 [INFO]: File deleted: uploads\file-1719333982347-290409608
+2024-06-25 12:46:25 [INFO]: File deleted: uploads\file-1719333983366-570100446
+2024-06-25 12:47:01 [INFO]: File deleted: uploads\file-1719333830301-430364387
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: Starting worker initialization...
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: Starting worker initialization...
+2024-06-28 08:33:53 [INFO]: Starting worker initialization...
+2024-06-28 08:33:53 [INFO]: Database connected successfully.
+2024-06-28 08:33:53 [INFO]: Worker is running
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: Database connected successfully.
+2024-06-28 08:33:53 [INFO]: Worker is running
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: Database connected successfully.
+2024-06-28 08:33:53 [INFO]: Worker is running
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:33:53 [INFO]: Starting worker initialization...
+2024-06-28 08:33:53 [INFO]: Database connected successfully.
+2024-06-28 08:33:53 [INFO]: Worker is running
+2024-06-28 08:33:53 [INFO]: -----------------------------------------------------
+2024-06-28 08:34:06 [INFO]: Processing file: uploads\file-1719578046879-433004413
+2024-06-28 08:34:08 [INFO]: File deleted: uploads\file-1719578046879-433004413
+2024-06-28 08:34:13 [INFO]: Processing file: uploads\file-1719578052669-630511588
+2024-06-28 08:34:29 [INFO]: File deleted: uploads\file-1719578052669-630511588
+2024-06-28 08:34:41 [INFO]: Processing file: uploads\file-1719578077493-291308107
+2024-06-28 08:37:36 [INFO]: File deleted: uploads\file-1719578077493-291308107
+2024-06-28 08:48:49 [INFO]: Processing file: uploads\file-1719578929493-322273102
+2024-06-28 08:49:05 [INFO]: File deleted: uploads\file-1719578929493-322273102
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Starting worker initialization...
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Starting worker initialization...
+2024-06-28 08:52:33 [INFO]: Starting worker initialization...
+2024-06-28 08:52:33 [INFO]: Database connected successfully.
+2024-06-28 08:52:33 [INFO]: Worker is running
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Database connected successfully.
+2024-06-28 08:52:33 [INFO]: Database connected successfully.
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Worker is running
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Worker is running
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:52:33 [INFO]: Starting worker initialization...
+2024-06-28 08:52:33 [INFO]: Database connected successfully.
+2024-06-28 08:52:33 [INFO]: Worker is running
+2024-06-28 08:52:33 [INFO]: -----------------------------------------------------
+2024-06-28 08:54:13 [INFO]: Processing file: uploads\file-1719579253213-693015954
+2024-06-28 08:54:14 [INFO]: File deleted: uploads\file-1719579253213-693015954
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: Starting worker initialization...
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: Starting worker initialization...
+2024-06-28 09:08:58 [INFO]: Database connected successfully.
+2024-06-28 09:08:58 [INFO]: Worker is running
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: Database connected successfully.
+2024-06-28 09:08:58 [INFO]: Worker is running
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: Starting worker initialization...
+2024-06-28 09:08:58 [INFO]: Database connected successfully.
+2024-06-28 09:08:58 [INFO]: Worker is running
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:08:58 [INFO]: Starting worker initialization...
+2024-06-28 09:08:58 [INFO]: Database connected successfully.
+2024-06-28 09:08:58 [INFO]: Worker is running
+2024-06-28 09:08:58 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Starting worker initialization...
+2024-06-28 09:22:15 [INFO]: Database connected successfully.
+2024-06-28 09:22:15 [INFO]: Worker is running
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Processing file: uploads\file-1719580925684-854917380
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Starting worker initialization...
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Database connected successfully.
+2024-06-28 09:22:15 [INFO]: Worker is running
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Starting worker initialization...
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Database connected successfully.
+2024-06-28 09:22:15 [INFO]: Worker is running
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:15 [INFO]: Starting worker initialization...
+2024-06-28 09:22:15 [INFO]: Database connected successfully.
+2024-06-28 09:22:15 [INFO]: Worker is running
+2024-06-28 09:22:15 [INFO]: -----------------------------------------------------
+2024-06-28 09:22:17 [INFO]: File deleted: uploads\file-1719580925684-854917380
+2024-06-28 09:24:11 [INFO]: Processing file: uploads\file-1719581051170-753399964
+2024-06-28 09:24:12 [INFO]: File deleted: uploads\file-1719581051170-753399964
+2024-06-28 09:38:26 [INFO]: Processing file: uploads\file-1719581906067-244324699
+2024-06-28 09:38:27 [INFO]: File deleted: uploads\file-1719581906067-244324699
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: Starting worker initialization...
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: Starting worker initialization...
+2024-06-28 11:11:28 [INFO]: Database connected successfully.
+2024-06-28 11:11:28 [INFO]: Worker is running
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: Database connected successfully.
+2024-06-28 11:11:28 [INFO]: Worker is running
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: Starting worker initialization...
+2024-06-28 11:11:28 [INFO]: Starting worker initialization...
+2024-06-28 11:11:28 [INFO]: Database connected successfully.
+2024-06-28 11:11:28 [INFO]: Worker is running
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:28 [INFO]: Database connected successfully.
+2024-06-28 11:11:28 [INFO]: Worker is running
+2024-06-28 11:11:28 [INFO]: -----------------------------------------------------
+2024-06-28 11:11:36 [INFO]: Processing file: uploads\file-1719587493239-858548556
+2024-06-28 11:11:41 [INFO]: Processing file: uploads\file-1719587497769-498998766
+2024-06-28 11:11:47 [INFO]: Processing file: uploads\file-1719587503884-796334557
+2024-06-28 11:11:53 [INFO]: Processing file: uploads\file-1719587509786-31580894
+2024-06-28 11:16:58 [INFO]: File deleted: uploads\file-1719587493239-858548556
+2024-06-28 11:16:58 [INFO]: Processing file: uploads\file-1719587520948-814732441
+2024-06-28 11:17:08 [INFO]: File deleted: uploads\file-1719587497769-498998766
+2024-06-28 11:17:08 [INFO]: Processing file: uploads\file-1719587528050-451444229
+2024-06-28 11:17:15 [INFO]: File deleted: uploads\file-1719587503884-796334557
+2024-06-28 11:17:15 [INFO]: Processing file: uploads\file-1719587535372-996212406
+2024-06-28 11:17:23 [INFO]: File deleted: uploads\file-1719587509786-31580894
+2024-06-28 11:17:24 [INFO]: Processing file: uploads\file-1719587544323-399430504
+2024-06-28 11:22:55 [INFO]: File deleted: uploads\file-1719587520948-814732441
+2024-06-28 11:23:05 [INFO]: File deleted: uploads\file-1719587528050-451444229
+2024-06-28 11:23:14 [INFO]: File deleted: uploads\file-1719587535372-996212406
+2024-06-28 11:23:16 [INFO]: File deleted: uploads\file-1719587544323-399430504

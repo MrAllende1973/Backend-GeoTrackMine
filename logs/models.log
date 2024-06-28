@@ -2,3 +2,37 @@
 2024-06-22 05:14:29 [INFO]: All models were synchronized successfully.
 2024-06-22 06:07:34 [INFO]: Connection established successfully.
 2024-06-22 06:07:34 [INFO]: All models were synchronized successfully.
+2024-06-25 10:51:04 [INFO]: Connection established successfully.
+2024-06-25 10:51:04 [INFO]: All models were synchronized successfully.
+2024-06-25 10:55:08 [INFO]: Connection established successfully.
+2024-06-25 10:55:08 [INFO]: All models were synchronized successfully.
+2024-06-25 11:00:09 [INFO]: Connection established successfully.
+2024-06-25 11:00:09 [INFO]: All models were synchronized successfully.
+2024-06-28 08:33:45 [INFO]: Connection established successfully.
+2024-06-28 08:33:45 [INFO]: All models were synchronized successfully.
+2024-06-28 08:52:23 [INFO]: Connection established successfully.
+2024-06-28 08:52:23 [ERROR]: Unable to initialize models: Referencing column 'managerID' and referenced column 'managerID' in foreign key constraint 'alerta_ibfk_3' are incompatible.
+2024-06-28 09:08:49 [INFO]: Connection established successfully.
+2024-06-28 09:08:49 [ERROR]: Unable to initialize models: Referencing column 'managerID' and referenced column 'managerID' in foreign key constraint 'alerta_ibfk_3' are incompatible.
+2024-06-28 09:11:41 [INFO]: Connection established successfully.
+2024-06-28 09:11:41 [ERROR]: Unable to initialize models: Referencing column 'managerID' and referenced column 'managerID' in foreign key constraint 'alerta_ibfk_3' are incompatible.
+2024-06-28 09:13:36 [INFO]: Connection established successfully.
+2024-06-28 09:13:36 [ERROR]: Unable to initialize models: Referencing column 'managerID' and referenced column 'managerID' in foreign key constraint 'alerta_ibfk_3' are incompatible.
+2024-06-28 09:14:08 [INFO]: Connection established successfully.
+2024-06-28 09:14:08 [ERROR]: Unable to initialize models: Referencing column 'managerID' and referenced column 'managerID' in foreign key constraint 'alerta_ibfk_3' are incompatible.
+2024-06-28 09:14:15 [INFO]: Connection established successfully.
+2024-06-28 09:14:15 [INFO]: All models were synchronized successfully.
+2024-06-28 09:20:36 [INFO]: Connection established successfully.
+2024-06-28 09:20:36 [INFO]: All models were synchronized successfully.
+2024-06-28 09:20:48 [INFO]: Connection established successfully.
+2024-06-28 09:20:48 [INFO]: All models were synchronized successfully.
+2024-06-28 09:20:58 [INFO]: Connection established successfully.
+2024-06-28 09:20:59 [INFO]: All models were synchronized successfully.
+2024-06-28 09:21:07 [INFO]: Connection established successfully.
+2024-06-28 09:21:07 [INFO]: All models were synchronized successfully.
+2024-06-28 09:30:24 [INFO]: Connection established successfully.
+2024-06-28 09:30:24 [INFO]: All models were synchronized successfully.
+2024-06-28 09:35:10 [INFO]: Connection established successfully.
+2024-06-28 09:35:11 [INFO]: All models were synchronized successfully.
+2024-06-28 11:11:23 [INFO]: Connection established successfully.
+2024-06-28 11:11:24 [INFO]: All models were synchronized successfully.
