@@ -370,3 +370,131 @@
 2024-06-28 11:23:05 [INFO]: File deleted: uploads\file-1719587528050-451444229
 2024-06-28 11:23:14 [INFO]: File deleted: uploads\file-1719587535372-996212406
 2024-06-28 11:23:16 [INFO]: File deleted: uploads\file-1719587544323-399430504
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: Starting worker initialization...
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: Database connected successfully.
+2024-07-01 19:52:11 [INFO]: Worker is running
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: Starting worker initialization...
+2024-07-01 19:52:11 [INFO]: Processing file: uploads\file-1719877917501-707660688
+2024-07-01 19:52:11 [INFO]: Database connected successfully.
+2024-07-01 19:52:11 [INFO]: Worker is running
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: Starting worker initialization...
+2024-07-01 19:52:11 [INFO]: Database connected successfully.
+2024-07-01 19:52:11 [INFO]: Worker is running
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:11 [INFO]: Starting worker initialization...
+2024-07-01 19:52:11 [INFO]: Database connected successfully.
+2024-07-01 19:52:11 [INFO]: Worker is running
+2024-07-01 19:52:11 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:12 [ERROR]: Processing error: Error al procesar el archivo: PROCEDURE geotrackmine.InsertGPSData does not exist
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: Starting worker initialization...
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: Database connected successfully.
+2024-07-01 19:52:49 [INFO]: Worker is running
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: Starting worker initialization...
+2024-07-01 19:52:49 [INFO]: Database connected successfully.
+2024-07-01 19:52:49 [INFO]: Worker is running
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: Starting worker initialization...
+2024-07-01 19:52:49 [INFO]: Starting worker initialization...
+2024-07-01 19:52:49 [INFO]: Database connected successfully.
+2024-07-01 19:52:49 [INFO]: Database connected successfully.
+2024-07-01 19:52:49 [INFO]: Worker is running
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:49 [INFO]: Worker is running
+2024-07-01 19:52:49 [INFO]: -----------------------------------------------------
+2024-07-01 19:52:52 [INFO]: Processing file: uploads\file-1719877972598-354576658
+2024-07-01 19:52:53 [ERROR]: Processing error: Error al procesar el archivo: PROCEDURE geotrackmine.InsertGPSData does not exist
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Starting worker initialization...
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Starting worker initialization...
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Database connected successfully.
+2024-07-01 19:53:30 [INFO]: Worker is running
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Database connected successfully.
+2024-07-01 19:53:30 [INFO]: Starting worker initialization...
+2024-07-01 19:53:30 [INFO]: Worker is running
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Database connected successfully.
+2024-07-01 19:53:30 [INFO]: Worker is running
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:30 [INFO]: Starting worker initialization...
+2024-07-01 19:53:30 [INFO]: Database connected successfully.
+2024-07-01 19:53:30 [INFO]: Worker is running
+2024-07-01 19:53:30 [INFO]: -----------------------------------------------------
+2024-07-01 19:53:32 [INFO]: Processing file: uploads\file-1719878012382-139531667
+2024-07-01 19:53:33 [INFO]: File deleted: uploads\file-1719878012382-139531667
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Starting worker initialization...
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Starting worker initialization...
+2024-07-03 19:00:28 [INFO]: Database connected successfully.
+2024-07-03 19:00:28 [INFO]: Worker is running
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Database connected successfully.
+2024-07-03 19:00:28 [INFO]: Worker is running
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Starting worker initialization...
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Starting worker initialization...
+2024-07-03 19:00:28 [INFO]: Database connected successfully.
+2024-07-03 19:00:28 [INFO]: Worker is running
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:00:28 [INFO]: Database connected successfully.
+2024-07-03 19:00:28 [INFO]: Worker is running
+2024-07-03 19:00:28 [INFO]: -----------------------------------------------------
+2024-07-03 19:48:51 [INFO]: Processing file: uploads\file-1720050531119-517129520
+2024-07-03 19:48:52 [INFO]: File deleted: uploads\file-1720050531119-517129520
+2024-07-04 01:26:05 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:05 [INFO]: Starting worker initialization...
+2024-07-04 01:26:05 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:05 [INFO]: Starting worker initialization...
+2024-07-04 01:26:05 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:05 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:05 [INFO]: Starting worker initialization...
+2024-07-04 01:26:05 [INFO]: Starting worker initialization...
+2024-07-04 01:26:06 [INFO]: Database connected successfully.
+2024-07-04 01:26:06 [INFO]: Database connected successfully.
+2024-07-04 01:26:06 [INFO]: Worker is running
+2024-07-04 01:26:06 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:06 [INFO]: Worker is running
+2024-07-04 01:26:06 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:06 [INFO]: Database connected successfully.
+2024-07-04 01:26:06 [INFO]: Worker is running
+2024-07-04 01:26:06 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:06 [INFO]: Database connected successfully.
+2024-07-04 01:26:06 [INFO]: Worker is running
+2024-07-04 01:26:06 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: Starting worker initialization...
+2024-07-04 01:26:31 [INFO]: Starting worker initialization...
+2024-07-04 01:26:31 [INFO]: Database connected successfully.
+2024-07-04 01:26:31 [INFO]: Database connected successfully.
+2024-07-04 01:26:31 [INFO]: Worker is running
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: Worker is running
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: Starting worker initialization...
+2024-07-04 01:26:31 [INFO]: Starting worker initialization...
+2024-07-04 01:26:31 [INFO]: Database connected successfully.
+2024-07-04 01:26:31 [INFO]: Worker is running
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------
+2024-07-04 01:26:31 [INFO]: Database connected successfully.
+2024-07-04 01:26:31 [INFO]: Worker is running
+2024-07-04 01:26:31 [INFO]: -----------------------------------------------------

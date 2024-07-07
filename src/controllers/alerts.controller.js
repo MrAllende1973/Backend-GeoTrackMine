@@ -1,6 +1,6 @@
-// routes/alerts.routes.js
-import { Router } from 'express';
-import { fetchAnomalyAlerts } from '../controllers/alerts.controller.js';
+// controllers/anomalyAlert.controller.js
+import { getAnomalyAlerts } from '../services/alerts.services.js';
+import { createApiResponse } from '../utils/response.handle.js';
 import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
@@ -19,7 +19,7 @@ const logger = createLogger({
     ),
     transports: [
         new transports.Console(),
-        new transports.File({ filename: 'logs/routes.log', format: format.combine(
+        new transports.File({ filename: 'logs/alerts.log', format: format.combine(
             format.timestamp({
                 format: 'YYYY-MM-DD HH:mm:ss'
             }),
@@ -30,11 +30,12 @@ const logger = createLogger({
     ]
 });
 
-const router = Router();
-
-router.get('/getAlerts', (req, res, next) => {
-    logger.info(`Request received: ${req.method} ${req.originalUrl}`);
-    fetchAnomalyAlerts(req, res, next);
-});
-
-export default router;
+export const fetchAnomalyAlerts = async (req, res) => {
+    try {
+        const alerts = await getAnomalyAlerts();
+        res.json(createApiResponse(true, 'Fetched anomaly alerts successfully', 200, alerts));
+    } catch (error) {
+        logger.error('Error fetching anomaly alerts:', error.message);
+        res.status(500).json(createApiResponse(false, 'Error fetching anomaly alerts', 500, null));
+    }
+};

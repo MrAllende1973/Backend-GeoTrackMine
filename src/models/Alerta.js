@@ -41,6 +41,15 @@ Alerta.init({
         },
         onDelete: 'SET NULL',
     },
+    batchID: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+            model: GPSData,
+            key: 'batchID',
+        },
+        onDelete: 'CASCADE',
+    },
     managerID: {
         type: DataTypes.INTEGER,
         allowNull: true,
@@ -61,8 +70,10 @@ Alerta.init({
     timestamps: false,
 });
 
+// Definir relaciones
 Alerta.belongsTo(Despachador, { foreignKey: 'dispatcherID' });
 Alerta.belongsTo(GPSData, { foreignKey: 'fileID' });
+Alerta.belongsTo(GPSData, { foreignKey: 'batchID' });
 Alerta.belongsTo(AlertManager, { foreignKey: 'managerID' });
 
 export default Alerta;

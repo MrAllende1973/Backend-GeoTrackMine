@@ -166,3 +166,11 @@
 2024-06-28 11:23:05 [INFO]: Archivo procesado y datos almacenados con éxito
 2024-06-28 11:23:14 [INFO]: Archivo procesado y datos almacenados con éxito
 2024-06-28 11:23:16 [INFO]: Archivo procesado y datos almacenados con éxito
+2024-07-01 19:52:11 [INFO]: Processing file Excel: uploads\file-1719877917501-707660688
+2024-07-01 19:52:12 [ERROR]: Error al procesar el archivo: PROCEDURE geotrackmine.InsertGPSData does not exist
+2024-07-01 19:52:52 [INFO]: Processing file Excel: uploads\file-1719877972598-354576658
+2024-07-01 19:52:53 [ERROR]: Error al procesar el archivo: PROCEDURE geotrackmine.InsertGPSData does not exist
+2024-07-01 19:53:32 [INFO]: Processing file Excel: uploads\file-1719878012382-139531667
+2024-07-01 19:53:33 [INFO]: Archivo procesado y datos almacenados con éxito
+2024-07-03 19:48:51 [INFO]: Processing file Excel: uploads\file-1720050531119-517129520
+2024-07-03 19:48:52 [INFO]: Archivo procesado y datos almacenados con éxito
