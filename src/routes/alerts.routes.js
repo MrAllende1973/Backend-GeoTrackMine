@@ -23,18 +23,13 @@ const logger = createLogger({
             format.timestamp({
                 format: 'YYYY-MM-DD HH:mm:ss'
             }),
-            format.printf(({ timestamp, level, message }) => {
-                return `${timestamp} [${level.toUpperCase()}]: ${message}`;
-            })
+            customFormat
         )})
     ]
 });
 
 const router = Router();
 
-router.get('/getAlerts', (req, res, next) => {
-    logger.info(`Request received: ${req.method} ${req.originalUrl}`);
-    fetchAnomalyAlerts(req, res, next);
-});
+router.get('/getAlerts', fetchAnomalyAlerts);
 
 export default router;

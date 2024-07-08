@@ -1,4 +1,4 @@
-// services/anomalyAlert.services.js
+// services/alerts.services.js
 import AnomalyAlert from '../models/AnomalyAlert.js';
 
 export const getAnomalyAlerts = async () => {
@@ -8,6 +8,6 @@ export const getAnomalyAlerts = async () => {
         });
         return alerts;
     } catch (error) {
-        throw new Error('Error fetching anomaly alerts: ' + error.message);
+        throw new Error('Error fetching anomaly alerts');
     }
 };

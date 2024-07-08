@@ -22,3 +22,5 @@
 2024-07-01 19:52:53 [ERROR]: Logged error to database: PROCEDURE geotrackmine.InsertGPSData does not exist
 2024-07-01 19:52:53 [ERROR]: Logged error to database: PROCEDURE geotrackmine.InsertGPSData does not exist
 2024-07-01 19:52:53 [ERROR]: Logged error to database: Processing error
+2024-07-07 22:48:11 [ERROR]: Logged error to database: colorizer is not defined
+2024-07-07 22:48:11 [ERROR]: Error: colorizer is not defined

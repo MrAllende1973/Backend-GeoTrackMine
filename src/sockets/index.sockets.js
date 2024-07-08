@@ -1,3 +1,4 @@
+// sockets/index.sockets.js
 import { Server } from 'socket.io';
 import { logErrorToDatabase } from '../utils/error.handle.js';
 
