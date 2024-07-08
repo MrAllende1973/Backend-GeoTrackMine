@@ -1,6 +1,3 @@
--- MySQL Script for GeoTrackMine
--- Model: GeoTrackMine
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -29,7 +26,12 @@ CREATE TABLE IF NOT EXISTS `GeoTrackMine`.`Alertas` (
     `message` TEXT NOT NULL,
     `timestamp` DATETIME NOT NULL,
     `dispatcherID` VARCHAR(255),
-    FOREIGN KEY (`dispatcherID`) REFERENCES `GeoTrackMine`.`Despachadores`(`dispatcherID`) ON DELETE SET NULL
+    `fileID` VARCHAR(255),
+    `batchID` INT,
+    `managerID` INT,
+    FOREIGN KEY (`dispatcherID`) REFERENCES `GeoTrackMine`.`Despachadores`(`dispatcherID`) ON DELETE SET NULL,
+    FOREIGN KEY (`fileID`, `batchID`) REFERENCES `GeoTrackMine`.`GPSData`(`fileID`, `batchID`) ON DELETE CASCADE,
+    FOREIGN KEY (`managerID`) REFERENCES `GeoTrackMine`.`AlertManager`(`managerID`) ON DELETE SET NULL
 ) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
