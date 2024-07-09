@@ -118,3 +118,13 @@
 [34m2024-07-08T02:35:04.894Z[39m [[31merror[39m]: Error al cargar rutas de alerts: Cannot find module 'C:\Users\cbaut\OneDrive\SSD\Universidad\Semestres\2024_1_Semestre\Proyecto IV\GeoTrackMine\API_REST\src\services\a.services.js' imported from C:\Users\cbaut\OneDrive\SSD\Universidad\Semestres\2024_1_Semestre\Proyecto IV\GeoTrackMine\API_REST\src\controllers\alerts.controller.js
 [34m2024-07-08T02:47:09.758Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../controllers/alerts.controller.js' does not provide an export named 'createAnomalyAlert'
 [34m2024-07-08T02:47:17.270Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../controllers/alerts.controller.js' does not provide an export named 'createAnomalyAlert'
+[34m2024-07-08T03:38:43.640Z[39m [[31merror[39m]: Error al cargar rutas de alerts: Cannot find package 'qrcode-terminal' imported from C:\Users\cbaut\OneDrive\SSD\Universidad\Semestres\2024_1_Semestre\Proyecto IV\GeoTrackMine\API_REST\src\services\whatsapp.service.js
+[34m2024-07-08T03:40:39.897Z[39m [[31merror[39m]: Error al cargar rutas de alerts: Named export 'LocalAuth' not found. The requested module 'whatsapp-web.js' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+
+import pkg from 'whatsapp-web.js';
+const { Client, LocalAuth } = pkg;
+
+[34m2024-07-08T04:16:57.769Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../services/alerts.services.js' does not provide an export named 'getAnomalyAlerts'
+[34m2024-07-08T04:21:09.777Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../services/alerts.services.js' does not provide an export named 'getAnomalyAlerts'
+[34m2024-07-08T04:21:19.757Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../services/alerts.services.js' does not provide an export named 'getAnomalyAlerts'
