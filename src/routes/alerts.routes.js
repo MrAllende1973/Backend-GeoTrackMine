@@ -1,6 +1,5 @@
-// routes/alerts.routes.js
 import { Router } from 'express';
-import { fetchAnomalyAlerts } from '../controllers/alerts.controller.js';
+import { fetchAnomalyAlerts, resolveAlert, reopenAlert } from '../controllers/alerts.controller.js';
 import { createLogger, transports, format } from 'winston';
 import chalk from 'chalk';
 
@@ -31,5 +30,7 @@ const logger = createLogger({
 const router = Router();
 
 router.get('/getAlerts', fetchAnomalyAlerts);
+router.put('/resolveAlert/:id', resolveAlert);
+router.put('/reopenAlert/:id', reopenAlert);
 
 export default router;

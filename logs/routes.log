@@ -129,3 +129,5 @@ const { Client, LocalAuth } = pkg;
 [34m2024-07-08T04:21:09.777Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../services/alerts.services.js' does not provide an export named 'getAnomalyAlerts'
 [34m2024-07-08T04:21:19.757Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../services/alerts.services.js' does not provide an export named 'getAnomalyAlerts'
 2024-07-09 02:05:38 [INFO]: Request received: POST /api/gpsdata/upload
+[34m2024-07-10T06:25:03.147Z[39m [[31merror[39m]: Error al cargar rutas de alerts: The requested module '../controllers/alerts.controller.js' does not provide an export named 'reopenAlert'
+[34m2024-07-10T06:29:06.264Z[39m [[31merror[39m]: Error al cargar rutas de alerts: Missing } in template expression

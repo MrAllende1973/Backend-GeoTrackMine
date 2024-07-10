@@ -1,5 +1,4 @@
-// controllers/alerts.controller.js
-import { getAnomalyAlerts } from '../services/alerts.services.js';
+import { getAnomalyAlerts, updateAlertState } from '../services/alerts.services.js';
 import { createApiResponse } from '../utils/response.handle.js';
 import { io } from '../sockets/index.sockets.js';
 import { sendWhatsAppMessage } from '../services/whatsapp.service.js';
@@ -56,5 +55,31 @@ export const fetchAnomalyAlerts = async (req, res) => {
     } catch (error) {
         logger.error('Error fetching anomaly alerts:', error.message);
         res.status(500).json(createApiResponse(false, 'Error fetching anomaly alerts', 500, null));
+    }
+};
+
+export const resolveAlert = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const updatedAlert = await updateAlertState(id, 'Resuelta');
+        const message = `Alerta Resuelta:\nCAEX: ${updatedAlert.caex}\nFlota: ${updatedAlert.flota}\nGrupo: ${updatedAlert.grupo}\nLocalización: ${updatedAlert.localizacion}\nEstado: ${updatedAlert.estado}\nRazón: ${updatedAlert.razon}\nFecha: ${updatedAlert.fecha}`;
+        await sendWhatsAppMessage(message);
+        res.json(createApiResponse(true, 'Alert resolved successfully', 200, updatedAlert));
+    } catch (error) {
+        logger.error('Error resolving alert:', error.message);
+        res.status(500).json(createApiResponse(false, 'Error resolving alert', 500, null));
+    }
+};
+
+export const reopenAlert = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const updatedAlert = await updateAlertState(id, 'Reabierta');
+        const message = `Alerta Reabierta:\nCAEX: ${updatedAlert.caex}\nFlota: ${updatedAlert.flota}\nGrupo: ${updatedAlert.grupo}\nLocalización: ${updatedAlert.localizacion}\nEstado: ${updatedAlert.estado}\nRazón: ${updatedAlert.razon}\nFecha: ${updatedAlert.fecha}`;
+        await sendWhatsAppMessage(message);
+        res.json(createApiResponse(true, 'Alert reopened successfully', 200, updatedAlert));
+    } catch (error) {
+        logger.error('Error reopening alert:', error.message);
+        res.status(500).json(createApiResponse(false, 'Error reopening alert', 500, null));
     }
 };

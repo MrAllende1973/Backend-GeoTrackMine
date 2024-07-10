@@ -397,3 +397,82 @@
 2024-07-09 00:54:13 [INFO]: Server running on port 3005
 2024-07-09 02:05:44 [INFO]: Logging HTTP request: POST|/api/gpsdata/upload|202|5513 ms|::1|-|PostmanRuntime/7.39.0|
 
+2024-07-09 02:15:00 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|200|391 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-09 02:58:53 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|71 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-09 02:58:53 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|30 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-09 02:58:53 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|24 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 00:45:22 [INFO]: Starting server initialization...
+2024-07-10 00:45:23 [INFO]: Server running on port 3005
+2024-07-10 00:45:37 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|249 ms|::1|-|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 00:45:37 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|26 ms|::1|-|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:54:01 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|87 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:54:01 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|36 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:54:01 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|32 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:59:58 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|40 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:59:58 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|31 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 01:59:58 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|26 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 02:10:56 [INFO]: Starting server initialization...
+2024-07-10 02:10:57 [INFO]: Server running on port 3005
+2024-07-10 02:11:09 [INFO]: Starting server initialization...
+2024-07-10 02:11:09 [INFO]: Server running on port 3005
+2024-07-10 02:11:14 [INFO]: Starting server initialization...
+2024-07-10 02:11:15 [INFO]: Server running on port 3005
+2024-07-10 02:11:31 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|432 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 02:11:31 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|25 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 02:11:31 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|304|17 ms|::1|http://localhost:5173/|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) frontend-electron/1.0.0 Chrome/120.0.6099.291 Electron/28.3.3 Safari/537.36|
+
+2024-07-10 02:11:50 [INFO]: Logging HTTP request: GET|/api/alerts/getAlerts|200|24 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:25:02 [INFO]: Starting server initialization...
+2024-07-10 02:25:03 [INFO]: Server running on port 3005
+2024-07-10 02:25:07 [INFO]: Starting server initialization...
+2024-07-10 02:25:08 [INFO]: Server running on port 3005
+2024-07-10 02:25:17 [INFO]: Starting server initialization...
+2024-07-10 02:25:18 [INFO]: Server running on port 3005
+2024-07-10 02:25:48 [INFO]: Logging HTTP request: POST|/api/alerts/resolveAlert/1|404|5 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:26:32 [INFO]: Starting server initialization...
+2024-07-10 02:26:32 [INFO]: Server running on port 3005
+2024-07-10 02:26:36 [INFO]: Logging HTTP request: POST|/api/alerts/resolveAlert/1|404|4 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:27:14 [INFO]: Logging HTTP request: PUT|/api/alerts/resolveAlert/1|200|1178 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:27:36 [INFO]: Logging HTTP request: PUT|/api/alerts/reopenAlert/1|200|511 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:28:59 [INFO]: Starting server initialization...
+2024-07-10 02:29:00 [INFO]: Server running on port 3005
+2024-07-10 02:29:06 [INFO]: Starting server initialization...
+2024-07-10 02:29:30 [INFO]: Starting server initialization...
+2024-07-10 02:29:31 [INFO]: Server running on port 3005
+2024-07-10 02:29:36 [INFO]: Starting server initialization...
+2024-07-10 02:29:36 [INFO]: Server running on port 3005
+2024-07-10 02:30:24 [INFO]: Logging HTTP request: PUT|/api/alerts/resolveAlert/1|200|1106 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:31:10 [INFO]: Logging HTTP request: PUT|/api/alerts/reopenAlert/1|200|515 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:33:04 [INFO]: Logging HTTP request: PUT|/api/alerts/resolveAlert/1|500|15 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:33:12 [INFO]: Logging HTTP request: PUT|/api/alerts/resolveAlert/2|200|920 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:33:32 [INFO]: Logging HTTP request: PUT|/api/alerts/reopenAlert/1|500|6 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:34:05 [INFO]: Logging HTTP request: PUT|/api/alerts/reopenAlert/2|200|524 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:34:26 [INFO]: Logging HTTP request: PUT|/api/alerts/resolveAlert/3|200|797 ms|::1|-|PostmanRuntime/7.39.0|
+
+2024-07-10 02:36:06 [INFO]: Logging HTTP request: PUT|/api/alerts/reopenAlert/3|200|739 ms|::1|-|PostmanRuntime/7.39.0|
+
