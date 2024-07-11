@@ -21,11 +21,13 @@ export const updateAlertState = async (id, newState) => {
             throw new Error('Invalid state');
         }
 
-        // Solo permite cambios de estado de 'Demora' o 'Reserva' a 'Resuelta', y de 'Resuelta' a 'Reabierta'
+        // Permitir cambios de estado según la lógica requerida
         if ((alert.estado === 'Demora' || alert.estado === 'Reserva') && newState === 'Resuelta') {
             alert.estado = newState;
         } else if (alert.estado === 'Resuelta' && newState === 'Reabierta') {
-            alert.estado = 'Reabierta'; // Cambio de estado a 'Reabierta'
+            alert.estado = 'Reabierta';
+        } else if (alert.estado === 'Reabierta' && newState === 'Resuelta') {
+            alert.estado = 'Resuelta';
         } else {
             throw new Error('Invalid state transition');
         }
